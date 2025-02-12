@@ -4,14 +4,14 @@ int main(){
     int escolha_menu;
     int escolha_atributo;
 // Carta 01
-    char estado1;
+    char* estado1;
     char nome_cidade1[50];
     unsigned long int populacao1;
     float area1, pib1, densidade_populacional1, pib_per_capita1, super_poder1;
     int pontos_turisticos1, cod_carta1;
 
 // Carta 02
-    char estado2;
+    char* estado2;
     char nome_cidade2[50];
     unsigned long int populacao2;
     float area2, pib2, densidade_populacional2, pib_per_capita2, super_poder2;
@@ -26,7 +26,7 @@ int main(){
     switch (escolha_menu)
     {
     case 1:
-        printf("Vamos começas inserindo os atributos da Primeira Carta!\n");
+        printf("Vamos começar inserindo os atributos da Primeira Carta!\n");
 
 //------------------Primeira Carta------------------
 //Estados 
@@ -57,7 +57,7 @@ int main(){
         printf("Numero de Habitantes.\n");
         scanf("%lu", &populacao1);
     
-        densidade_populacional1 = area1 / populacao1;
+        densidade_populacional1 =  populacao1 / area1;
         pib_per_capita1 = pib1 / populacao1;
         super_poder1 = pontos_turisticos1 + area1 + populacao1 + pib_per_capita1;
 
@@ -106,7 +106,7 @@ int main(){
         printf("Numero de Habitantes.\n");
         scanf("%lu", &populacao2);
         
-        densidade_populacional2 = area2 / populacao2;
+        densidade_populacional2 = populacao2 / area2;
         pib_per_capita2 = pib2 / populacao2;
         super_poder2 = pontos_turisticos2 + area2 + populacao2 + pib_per_capita2;
         
@@ -137,59 +137,54 @@ int main(){
         {
 // Área
         case 1:
-            if(area1 == area2){
-                printf("Empate na Área!\n");
-            } else if (area1 > area2){
-                printf("O Ganhador com a Maior Área: %c0%d\n", estado1, cod_carta1);
-            } else{
-                printf("O Ganhador com a Maior Área: %c0%d\n", estado2, cod_carta2);
-            }
+        if area 1 = area 2;
+            printf("Empate!!");
+        else:
+            area1 > area2 ?
+            printf("O Ganhador com a Maior Área: %c0%d\n", estado1, cod_carta1) :
+            printf("O Ganhador com a Maior Área: %c0%d\n", estado2, cod_carta2);
             break;
 
 // População
         case 2:
-            if(populacao1 == populacao2){
-                printf("Empate na População!\n");
-            } else if(populacao1 > populacao2){
-                printf("O Ganhador com a Maior População: %c0%d\n", estado1, cod_carta1);
-            } else {
-                printf("O Ganhador com a Maior População: %c0%d\n", estado2, cod_carta2);
-            }
+        if populacao1 1 = populacao2 2;
+            printf("Empate!!");
+        else:
+            populacao1 > populacao2 ?
+            printf("O Ganhador com a Maior População: %c0%d\n", estado1, cod_carta1) :
+            printf("O Ganhador com a Maior População: %c0%d\n", estado2, cod_carta2);
             break;
 
 // Densidade Populacional
         case 3:
-            if(densidade_populacional1 == densidade_populacional2){
-                printf("Empate nesse Densidade Populacional!\n");
-            } else if(densidade_populacional1 < densidade_populacional2){
-                printf("O Ganhador com a Menor Densidade Populacional é: %c0%d\n", estado1, cod_carta1);
-            } else {
-                printf("Com a Maior Densidade Populacional: %c0%d\n", estado2, cod_carta2);
-            }
+        if densidade_populacional1 1 = densidade_populacional2 2;
+            printf("Empate!!");
+        else:
+            densidade_populacional1 < densidade_populacional2 ?
+            printf("O Ganhador com a Menor Densidade Populacional é: %c0%d\n", estado1, cod_carta1) :
+            printf("O Ganhador com a Menor Densidade Populacional é: %c0%d\n", estado1, cod_carta1);
             break;
 
 //PIB per Capita
         case 4:
-            if(pib_per_capita1 == pib_per_capita2){
-                printf("Empate no PIB per Capita!\n");
-            } else if(pib_per_capita1 > pib_per_capita2){
-                printf("O Ganhador com a Maior PIB per Capita: %c0%d\n", estado1, cod_carta1);
-            } else {
-                printf("O Ganhador com a Maior PIB per Capita: %c0%d\n", estado2, cod_carta2);
-            }
+        if pib_per_capita1 1 = pib_per_capita2 2;
+            printf("Empate!!");
+        else:
+            pib_per_capita1 > pib_per_capita2 ?
+            printf("O Ganhador com a Maior PIB per Capita: %c0%d\n", estado1, cod_carta1) :
+            printf("O Ganhador com a Maior PIB per Capita: %c0%d\n", estado2, cod_carta2);
             break;
 
 // Super Poder
         case 5:
-            if(super_poder1 == super_poder2){
-                printf("Empate no SUPER PODERRRR!!!!\n");
-            } else if (super_poder1 > super_poder2){
-                printf("SUPERRR POWERRRRR!!!!!: %c0%d\n", estado1, cod_carta1);
-            } else {
-                printf("SUPERRR POWERRRRR!!!!!: %c0%d\n", estado2, cod_carta2);
-            }
+        if super_poder1 1 = super_poder2 2;
+            printf("Empate!!");
+        else:
+            super_poder1 > super_poder2 ?
+            printf("SUPERRR POWERRRRR!!!!!: %c0%d\n", estado1, cod_carta1) :
+            printf("SUPERRR POWERRRRR!!!!!: %c0%d\n", estado2, cod_carta2);
             break;
-
+            
 //Saida
         default:
             break;
